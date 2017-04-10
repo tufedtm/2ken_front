@@ -1,10 +1,6 @@
-.wrap {
-  .container();
-}
-
 a {
   &:hover {
-    color: @active-color-font;
+    color: @active-color;
   }
 }
 
@@ -17,14 +13,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 77px;
-  height: 28px;
 
-  font-size: 14px;
-  color: #2b3033;
+  color: #fff;
+  font-size: 15px;
 
-  border: 1px solid @active-color;
-  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  background-color: @accent-color;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
+}
+
+.btn--big {
+  padding: 9px 20px;
 }
 
 /*

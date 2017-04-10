@@ -1,0 +1,21 @@
+.aside-cities {
+  li:not(:last-child) {
+    margin-bottom: 3px;
+  }
+
+  a {
+    display: block;
+    padding: 22px 25px;
+
+    font-size: 19px;
+    letter-spacing: 0.4px;
+
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(72, 48, 143, .2);
+
+    &.current {
+      color: @active-color;
+    }
+  }
+}

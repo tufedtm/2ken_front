@@ -1,0 +1,119 @@
+.site-header-wrap {
+  margin-bottom: 15px;
+
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(72, 48, 143, .2);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  margin-left: 20px;
+
+  color: #000;
+  font-family: Philosopher, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+
+  small {
+    display: block;
+
+    font-family: @font-main;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+.site-nav {
+  position: relative;
+
+  > ul {
+    display: flex;
+    > li {
+      + li {
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .site-nav__dropdown {
+    display: none;
+
+    position: absolute;
+    top: calc(~'100% + 20px');
+    left: 0; // moz
+    z-index: 1;
+
+    padding: 15px 15px 15px 30px;
+
+    border: 1px solid @active-color;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 rgba(72, 48, 143, .2);
+
+    &::before,
+    &::after {
+      content: '';
+
+      bottom: 100%;
+      left: 20px;
+      border: solid transparent;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    &::before {
+      border-color: rgba(194, 225, 245, 0);
+      border-bottom-color: @active-color;
+      border-width: 8px;
+      margin-left: -8px;
+    }
+    &::after {
+      border-color: rgba(136, 183, 213, 0);
+      border-bottom-color: #fff;
+      border-width: 7px;
+      margin-left: -7px;
+    }
+
+    li {
+      color: #444;
+
+      &.current {
+        list-style-type: disc;
+        a {
+          font-weight: 500;
+        }
+      }
+    }
+    a {
+      line-height: 1.45;
+
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
+.site-nav--header > ul > li > a {
+  padding: 20px 0;
+}
+
+.site-nav__dropdown-link:hover {
+  .site-nav__dropdown {
+    display: initial;
+  }
+}
