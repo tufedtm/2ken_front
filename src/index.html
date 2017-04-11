@@ -4,20 +4,20 @@
 
 {% block content %}
   <div class="hero row">
-    <aside class="col-1">
+    <aside class="col-3">
       {% include 'includes/aside-country.html' %}
     </aside>
 
-    <main class="hero-content col-3">
+    <main class="hero-content col-9">
       <div class="hero-images">
         {% for item in [['кофейня', 'З&М'],['выпечка', 'Тулуза'],['ресторан', 'Буржуа'],['супермаркет', 'Шафран'],'','','','','','',''] %}
           <a href="">
-            <img src="http://placehold.it/1000x1000" alt="{{ item[0] + ' ' + item[1] }}">
+            <img src="http://placehold.it/1000x1000">
             <span>{{ item[0] }}&nbsp;<strong>{{ item[1] }}</strong></span>
           </a>
         {% endfor %}
       </div>
-      <a class="show-more-link" href="">показать все заведения</a>
+      <a class="show-more-link" href="catalog-list.html">показать все заведения</a>
     </main>
   </div>
 

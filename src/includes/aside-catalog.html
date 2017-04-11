@@ -1,0 +1,39 @@
+<div class="aside-catalog">
+  <h2 class="aside__title">Каталог</h2>
+
+  <form class="aside__form">
+    <input type="search" placeholder="поиск" required>
+  </form>
+
+  <ul>
+    {% for item in [
+    ['Шопинг', ['Рестораны (15)','Магазины (42)','Кафе (25)'], 'current'],
+    'Красота и здоровье',
+    'Развлечения',
+    'Услуги',
+    'Праздник',
+    'Электроника',
+    'Свадьба',
+    'Для дома и дачи',
+    'Драгоценности',
+    'Личное развитие',
+    'Транспорт',
+    'Путешествия',
+    'Эко-продукция',
+    'Гастрономия',
+    'Банк'
+    ] %}
+      {% if item.length == 3 %}
+        <li class="{{ item[2] }}"><a href="">{{ item[0] }}</a>
+          <ul>
+            {% for sub_item in item[1] %}
+              <li><a href="">{{ sub_item }}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% else %}
+        <li><a href="">{{ item }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
