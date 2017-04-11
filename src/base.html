@@ -47,7 +47,49 @@
       </ul>
     </nav>
 
-    <button class="btn btn--big">Войти</button>
+    <div class="user-wrap">
+      {% if false %}
+        <button class="btn btn--big">Войти</button>
+        <div class="auth-form-wrap auth-form-wrap--sign-in" data-form-type="sign_in" data-header-form>
+          <p class="auth-form__title">Авторизация</p>
+          <button class="auth-form__change-form-btn" data-form-type-link="sign_up">регистрация</button>
+
+          <form class="auth__form">
+            <input class="input" type="text" placeholder="логин" required>
+            <input class="input" type="password" placeholder="пароль" required>
+
+            <button class="btn btn--header-submit">Войти</button>
+          </form>
+
+          <p class="auth-form__or">или</p>
+
+          <div class="soc-auth"></div>
+
+        </div>
+
+        <div class="auth-form-wrap auth-form-wrap--sign-up" data-form-type="sign_up">
+
+          <p class="auth-form__title">Регистрация</p>
+          <button class="auth-form__change-form-btn" data-form-type-link="sign_in">авторизация</button>
+
+          <form class="auth__form">
+            <input class="input" type="text" placeholder="логин" required>
+            <input class="input" type="password" placeholder="пароль" required>
+            <input class="input" type="password" placeholder="пароль еще раз" required>
+
+            <button class="btn btn--header-submit">Зарегистрироваться</button>
+          </form>
+
+        </div>
+      {% endif %}
+
+      {% if true %}
+        <p class="user__username">Magomed <img src="http://placehold.it/40x40" alt="Magomed"></p>
+        <div class="user__logout">
+          <a href="">Выйти</a>
+        </div>
+      {% endif %}
+    </div>
   </div>
 </header>
 
@@ -69,8 +111,8 @@
     </nav>
 
     <div class="soc">
-      <a class="soc-item soc-item--vk" href="" target="_blank"></a>
-      <a class="soc-item soc-item--ig" href="" target="_blank"></a>
+      <a class="soc-item--vk" href="" target="_blank"></a>
+      <a class="soc-item--ig" href="" target="_blank"></a>
     </div>
   </div>
 </footer>

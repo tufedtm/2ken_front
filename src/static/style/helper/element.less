@@ -13,6 +13,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px 20px;
 
   color: #fff;
   font-size: 15px;
@@ -24,7 +25,8 @@ a {
 }
 
 .btn--big {
-  padding: 9px 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 
 /*
@@ -52,12 +54,13 @@ textarea {
 
 .input {
   width: 100%;
-  padding: 15px;
+  padding: 10px 15px;
 
   background-color: #fff;
   border: 1px solid #e1e0e0;
+  border-radius: 6px;
 
-  &:invalid {
+  &:invalid:not(:empty) {
     border-color: #fa6565;
   }
 }

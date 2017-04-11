@@ -117,3 +117,185 @@
     display: initial;
   }
 }
+
+/**
+ * форма авторизации
+ * старт
+ */
+
+.user-wrap {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:hover {
+    .auth-form-wrap[data-header-form] {
+      display: flex;
+    }
+    .user__logout {
+      display: block;
+    }
+  }
+}
+
+.auth-form-wrap {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+
+  flex-direction: column;
+  align-items: center;
+  width: 225px;
+  padding: 15px 20px;
+
+  border: 1px solid @accent-color;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(72, 48, 143, 0.2);
+
+  &::before,
+  &::after {
+    content: '';
+
+    bottom: 100%;
+    border: solid transparent;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::before {
+    right: 15px;
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: @accent-color;
+    border-width: 8px;
+  }
+  &::after {
+    right: 16px;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #fff;
+    border-width: 7px;
+  }
+
+  .input {
+    margin-bottom: 10px;
+  }
+}
+
+.auth-form-wrap--sign-in {
+  .auth__form {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e1e0e0;
+  }
+}
+
+.auth-form__title {
+  margin-bottom: 10px;
+
+  color: #2b3033;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.auth-form__change-form-btn {
+  margin-bottom: 20px;
+
+  color: #3d4348;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: underline;
+
+  border: none;
+  background-color: transparent;
+}
+
+.auth-form__or {
+  position: relative;
+  top: -12px;
+  .padding-x(15px);
+
+  font-family: @font-main;
+  font-weight: 600;
+
+  background-color: #fff;
+}
+
+.user__username {
+  display: flex;
+  align-items: center;
+
+  color: #4c5e70;
+  font-size: 14px;
+
+  img {
+    margin-left: 20px;
+
+    border-radius: 50%;
+  }
+}
+
+.user__logout {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1;
+  padding: 20px;
+
+  border: 1px solid @accent-color;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(72, 48, 143, 0.2);
+
+  &::before,
+  &::after {
+    content: '';
+
+    bottom: 100%;
+    border: solid transparent;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::before {
+    right: 15px;
+    border-color: rgba(194, 225, 245, 0);
+    border-bottom-color: @accent-color;
+    border-width: 8px;
+  }
+  &::after {
+    right: 16px;
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #fff;
+    border-width: 7px;
+  }
+
+  a {
+    display: block;
+    padding: 5px 17px;
+
+    font-size: 15px;
+
+    border: 1px solid @accent-color;
+    border-radius: 3px;
+    background-color: #fff;
+
+    &:hover {
+      color: @accent-color;
+    }
+  }
+}
+
+.btn--header-submit {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * форма авторизации
+ * конец
+ */
