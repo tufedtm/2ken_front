@@ -33,4 +33,22 @@ $(() => {
    * header form
    * end
    */
+
+
+  /**
+   * catalog detail slider
+   * start
+   */
+
+  $('[data-js-lightslider]').lightSlider({
+    item: 1,
+    controls: true,
+    loop: true,
+    pager: false
+  });
+
+  /**
+   * catalog detail slider
+   * end
+   */
 });
