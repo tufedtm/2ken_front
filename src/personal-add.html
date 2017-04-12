@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет - Добавить заведение{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <aside class="col-3">
+      <div class="aside-catalog">
+        <h2 class="aside__title">Личный кабинет</h2>
+
+        <ul>
+          <li class="current"><a href="">Собственные заведения</a></li>
+          <li><a href="personal-fav.html">Избранное</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="col-9">
+      <div class="item-add-form-wrap">
+        <form class="item-add-form">
+          <label>Название:<input type="text" required></label>
+          <label>Сфера деятельности:
+            <select required>
+              <option value="bank" selected>Банк</option>
+              <option value="">Гастрономия</option>
+              <option value="">Для дома и дачи</option>
+              <option value="">Драгоценности</option>
+              <option value="">Еда</option>
+              <option value="">Красота и здоровье</option>
+              <option value="">Личное развитие</option>
+              <option value="">Праздник</option>
+              <option value="">Путешествия</option>
+              <option value="">Развлечения</option>
+              <option value="">Свадьба</option>
+              <option value="">Транспорт</option>
+              <option value="">Услуги</option>
+              <option value="">Шопинг</option>
+              <option value="">Эко-продукция</option>
+              <option value="">Электроника</option>
+            </select>
+          </label>
+          <label>Расскажите о заведении:<textarea></textarea></label>
+          <label>Режим работы:<input type="text" required></label>
+          <label>Телефон:<input type="tel" required></label>
+          <label>Город:
+            <select required>
+              <option value="mkh" selected>Махачкала</option>
+              <option value="">Буйнакск</option>
+              <option value="">Дагестанские огни</option>
+              <option value="">Дербент</option>
+              <option value="">Избербаш</option>
+              <option value="">Каспийск</option>
+              <option value="">Кизляр</option>
+              <option value="">Хасавюрт</option>
+              <option value="">Южно-Сухокумск</option>
+            </select>
+          </label>
+          <label>Адрес:<input type="text" required></label>
+          <label>Email:<input type="email" required></label>
+          <label>Сайт:<input type="url" required></label>
+          <label>Instagram:<input type="url" required></label>
+          <label>Вконтакте:<input type="url" required></label>
+          <label class="input-photo">
+            <input type="file" multiple required data-placeholder="Фотографии" data-number="Фотографии: %s">
+          </label>
+
+          <button class="btn">сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

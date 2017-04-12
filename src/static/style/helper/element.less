@@ -46,8 +46,6 @@ label {
 textarea {
   width: 100%;
   height: 70px;
-
-  resize: vertical;
 }
 
 .input {
@@ -61,6 +59,125 @@ textarea {
   &:invalid:not(:empty) {
     border-color: #fa6565;
   }
+}
+
+.jq-selectbox {
+  display: block !important;
+  height: 42px;
+  margin-top: 10px;
+
+  font-weight: 400;
+
+  border: 1px solid #cecece;
+  border-radius: 2px;
+
+  vertical-align: middle;
+  cursor: pointer;
+
+  li {
+    padding: 5px 10px;
+    user-select: none;
+    white-space: nowrap;
+    &.selected {
+      background-color: #aaa;
+      color: #fff;
+    }
+    &:hover {
+      background-color: @accent-color;
+      color: #FFF;
+    }
+  }
+}
+
+.jq-selectbox__select {
+  padding: 11px 34px 11px 11px;
+}
+
+.jq-selectbox__select-text {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.jq-selectbox__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 100%;
+}
+
+.jq-selectbox__trigger-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  height: 0;
+  margin: auto;
+
+  border-top: 8px solid #aaa;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+.jq-selectbox:hover .jq-selectbox__trigger-arrow {
+  border-top-color: #414b59;
+}
+
+.jq-selectbox__dropdown {
+  width: 100%;
+  margin-top: -1px;
+
+  border: 1px solid @accent-color;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 rgba(72, 48, 143, .2);
+  overflow: hidden;
+}
+
+.jq-file {
+  display: block !important;
+  width: 100%;
+  height: 42px;
+
+  border: 1px solid #cecece;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.jq-file input {
+  height: inherit;
+  cursor: pointer;
+}
+
+.jq-file__name {
+  padding: 12px 45px 12px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.jq-file__browse {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29px;
+  height: 24px;
+  margin: auto;
+
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+  background-color: #ff712b;
+  border-radius: 4px;
+  text-indent: 0;
 }
 
 /*

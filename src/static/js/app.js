@@ -1,11 +1,28 @@
 $(() => {
 
   /**
+   * input phone mask
+   * start
+   */
+
+  $('input[type=tel]').mask('+7 (999) 999-99-99');
+
+  /**
+   * input phone mask
+   * end
+   */
+
+
+  /**
    * form styler
    * start
    */
 
-  $('input[type=radio], input[type=checkbox]').styler();
+  $('input[type=file], select').styler({
+    fileBrowse: '+',
+    fileNumber: 'Фотографии: %s',
+    filePlaceholder: ''
+  });
 
   /**
    * form styler
