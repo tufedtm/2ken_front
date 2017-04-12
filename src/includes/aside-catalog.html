@@ -24,15 +24,15 @@
     'Банк'
     ] %}
       {% if item.length == 3 %}
-        <li class="{{ item[2] }}"><a href="">{{ item[0] }}</a>
+        <li class="{{ item[2] }}"><a href="../catalog-list.html">{{ item[0] }}</a>
           <ul>
             {% for sub_item in item[1] %}
-              <li><a href="">{{ sub_item }}</a></li>
+              <li><a href="../catalog-list.html">{{ sub_item }}</a></li>
             {% endfor %}
           </ul>
         </li>
       {% else %}
-        <li><a href="">{{ item }}</a></li>
+        <li><a href="../catalog-list.html">{{ item }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>
