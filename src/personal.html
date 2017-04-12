@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Личный кабинет - Избранное{% endblock %}
+{% block title %}Личный кабинет - Собственные заведения{% endblock %}
 
 {% block content %}
   <div class="row">
@@ -9,20 +9,19 @@
         <h2 class="aside__title">Личный кабинет</h2>
 
         <ul>
-          <li><a href="personal.html">Собственные заведения</a></li>
-          <li class="current"><a href="">Избранное</a></li>
+          <li class="current"><a href="">Собственные заведения</a></li>
+          <li><a href="personal-fav.html">Избранное</a></li>
         </ul>
       </div>
     </aside>
 
     <div class="catalog-list col-9">
+      <a class="catalog-add-item plus-icon" href="">Добавить заведение</a>
+
       {% for item in [
       {'title': 'Пиросмани','type': 'ресторан','address': 'ул. Пушкина, 4'},
       {'title': 'З&М','type': 'кофейня','address': 'ул. И. Казака, 27А'},
       {'title': '05.ru','type': 'магазин','address': 'пр. Имама Шамиля, 5'},
-      {'title': 'Тулуза','type': 'выпечка','address': 'пр. Имама Шамиля, 29'},
-      {'title': 'Lakshmi','type': 'салон красоты','address': 'пр. Гамидова, 6а'},
-      {'title': 'Евроаквариум','type': 'зоомагазин','address': 'пр-кт Гамидова, 73'},
       {'title': 'Чудо света','type': 'магазин','address': 'ул. Коркмасова, 27Б'},
       {'title': 'La-creme','type': 'выпечка','address': 'ул. Дзержинского, 12'}] %}
         <div class="col-4">
