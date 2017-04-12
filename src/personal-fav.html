@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет - Избранное{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <aside class="col-3">
+      <div class="aside-catalog">
+        <h2 class="aside__title">Каталог</h2>
+
+        <ul>
+          <li><a href="">Собственные заведения</a></li>
+          <li class="current"><a href="">Избранное</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="catalog-list col-9">
+      {% for item in [
+      {'title': 'Пиросмани','type': 'ресторан','address': 'ул. Пушкина, 4'},
+      {'title': 'З&М','type': 'кофейня','address': 'ул. И. Казака, 27А'},
+      {'title': '05.ru','type': 'магазин','address': 'пр. Имама Шамиля, 5'},
+      {'title': 'Тулуза','type': 'выпечка','address': 'пр. Имама Шамиля, 29'},
+      {'title': 'Lakshmi','type': 'салон красоты','address': 'пр. Гамидова, 6а'},
+      {'title': 'Евроаквариум','type': 'зоомагазин','address': 'пр-кт Гамидова, 73'},
+      {'title': 'Чудо света','type': 'магазин','address': 'ул. Коркмасова, 27Б'},
+      {'title': 'La-creme','type': 'выпечка','address': 'ул. Дзержинского, 12'}] %}
+        <div class="col-4">
+          <div class="catalog-item">
+            <span class="catalog-item__badge">{{ item.type }}</span>
+            <a class="catalog-item__image" href="catalog-detail.html">
+              <img src="http://placehold.it/265x197" alt="">
+            </a>
+
+            <h4 class="catalog-item__title"><a href="catalog-detail.html">{{ item.title }}</a></h4>
+            <p class="catalog-item__address">{{ item.address }}</p>
+
+            <div class="catalog-item__rating">
+              <a class="catalog-item__rating-item" href="">105</a>
+              <a class="catalog-item__rating-item" href="">2</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+{% endblock %}
