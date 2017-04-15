@@ -1,0 +1,18 @@
+<div class="aside-catalog">
+  <h2 class="aside__title">Блог</h2>
+
+  <ul>
+    {% for item in [
+    'Автомобили',
+    'Наука и техника',
+    'Еда',
+    'Спорт',
+    'Животные',
+    'Мир',
+    'Места',
+    'Люди'
+    ] %}
+      <li><a href="../blog-list.html">{{ item }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

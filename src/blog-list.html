@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Блог{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <aside class="col-3">
+      {% include 'includes/aside-blog.html' %}
+      {% include 'includes/aside-catalog.html' %}
+    </aside>
+
+    <div class="catalog-list col-9">
+      {% for item in [
+      'Наблюдайте',
+      'А вы замечали?',
+      'Воронежская область',
+      'День...',
+      '...о вере',
+      'Республика Коми',
+      'Это стоит увидеть',
+      'Осторожно! В голове злая собака'
+      ]%}
+        <div class="col-4">
+          <div class="catalog-item">
+            <a class="catalog-item__image" href="blog-detail.html">
+              <img src="http://placehold.it/265x197" alt="">
+            </a>
+
+            <h4 class="blog-item__title"><a href="blog-detail.html">{{ item }}</a></h4>
+
+            <div class="catalog-item__rating">
+              <a class="catalog-item__rating-item" href="">105</a>
+              <a class="catalog-item__rating-item" href="">2</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

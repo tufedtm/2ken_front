@@ -6,6 +6,9 @@
 }
 
 .catalog-item {
+  display: flex;
+  flex-direction: column;
+  height: calc(~'100% - 20px');
   margin-bottom: 20px;
   padding-bottom: 10px;
 
@@ -61,6 +64,8 @@
 
 .catalog-item__title {
   margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   font-size: 18px;
   font-weight: 600;
@@ -79,6 +84,7 @@
 .catalog-item__rating {
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 .catalog-item__rating-item {
