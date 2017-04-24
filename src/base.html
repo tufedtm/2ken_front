@@ -14,7 +14,7 @@
 <body>
 
 <header class="site-header-wrap">
-  <div class="site-header container">
+  <div class="site-header container hidden-md-down">
     <a class="logo-wrap" href="/">
       <img src="http://placehold.it/80x80" alt="">
       <span class="logo-text">2Ken<small>вся республика в твоих руках</small></span>
@@ -62,13 +62,10 @@
           </form>
 
           <p class="auth-form__or">или</p>
-
           <div class="soc-auth"></div>
-
         </div>
 
         <div class="auth-form-wrap auth-form-wrap--sign-up" data-form-type="sign_up">
-
           <p class="auth-form__title">Регистрация</p>
           <button class="auth-form__change-form-btn" data-form-type-link="sign_in">авторизация</button>
 
@@ -79,7 +76,6 @@
 
             <button class="btn btn--header-submit">Зарегистрироваться</button>
           </form>
-
         </div>
       {% endif %}
 
@@ -89,6 +85,76 @@
           <a href="/">Выйти</a>
         </div>
       {% endif %}
+    </div>
+  </div>
+
+  <div class="site-header-xs container hidden-lg-up">
+    <div class="site-header-xs__top">
+      <a class="logo-wrap" href="/">
+        <img src="http://placehold.it/40x40" alt="">
+        <span class="logo-text">2Ken<small>вся республика в твоих руках</small></span>
+      </a>
+
+      <a class="header-xs__btn-lnk" href="catalog-list.html">Каталог</a>
+
+      <button class="header-xs-nav-toggle" data-js-xs-toggle-btn></button>
+    </div>
+    <div class="site-header-xs__bottom" data-js-xs-bottom>
+      <div>
+        <nav class="xs-nav">
+          <ul>
+            <li class="xs-nav__item"><a href="">Рейтинги</a></li>
+            <li class="xs-nav__item"><a href="blog-list.html">Блог</a></li>
+          </ul>
+        </nav>
+
+        {% if false %}
+          <div class="user-xs-wrap user-xs-wrap--logged">
+            <img class="user-xs-img" src="static/img/profile-icon.svg">
+            <a class="xs-nav__item xs-nav__item--first" href="personal.html">Magomed</a>
+            <a class="xs-nav__item" href="personal.html">Личный кабинет</a>
+            <a class="xs-nav__item" href="/">Выйти</a>
+          </div>
+        {% endif %}
+
+        <div class="user-xs-wrap">
+          <img class="user-xs-img" src="static/img/profile-icon.svg">
+          <button class="xs-nav__item" data-js-xs-auth-btn="sign_in">Войти</button>
+          <button class="xs-nav__item" data-js-xs-auth-btn="sign_up">Регистрация</button>
+        </div>
+
+      </div>
+
+      <div class="auth-form-wrap-xs auth-form-wrap--sign-in" data-js-xs-auth-form="sign_in">
+        <button class="xs-form-btn-back" data-js-xs-auth-back-btn>Назад</button>
+        <p class="auth-form__title">Авторизация</p>
+        <button class="auth-form__change-form-btn" data-js-xs-auth-btn="sign_up">регистрация</button>
+
+        <form class="auth__form">
+          <input class="input" type="text" placeholder="логин" required>
+          <input class="input" type="password" placeholder="пароль" required>
+
+          <button class="btn btn--header-submit">Войти</button>
+        </form>
+
+        <p class="auth-form__or">или</p>
+        <div class="soc-auth"></div>
+      </div>
+
+      <div class="auth-form-wrap-xs" data-js-xs-auth-form="sign_up">
+        <button class="xs-form-btn-back" data-js-xs-auth-back-btn>Назад</button>
+        <p class="auth-form__title">Регистрация</p>
+        <button class="auth-form__change-form-btn" data-js-xs-auth-btn="sign_in">авторизация</button>
+
+        <form class="auth__form">
+          <input class="input" type="text" placeholder="логин" required>
+          <input class="input" type="password" placeholder="пароль" required>
+          <input class="input" type="password" placeholder="пароль еще раз" required>
+
+          <button class="btn btn--header-submit">Зарегистрироваться</button>
+        </form>
+      </div>
+
     </div>
   </div>
 </header>

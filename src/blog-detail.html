@@ -3,15 +3,15 @@
 {% block title %}А вы замечали? - Блог{% endblock %}
 
 {% block content %}
-  <div class="row">
-    <aside class="col-3">
+  <div class="row blog-page">
+    <aside class="col-lg-3 hidden-md-down">
       {% include 'includes/aside-blog.html' %}
       {% include 'includes/aside-catalog.html' %}
     </aside>
 
-    <div class="col-9">
+    <div class="col-lg-9">
       <div class="detail-info">
-        <img src="http://placehold.it/835x376" alt="">
+        <img class="article__img" src="http://placehold.it/835x376" alt="">
 
         <div class="article__content">
           <h2 class="article-title">А вы замечали?</h2>
@@ -72,7 +72,7 @@
         'Это стоит увидеть',
         'Осторожно! В голове злая собака'
         ] %}
-          <div class="col-4">
+          <div class="col-md-4 col-6 {% if loop.index === 3 %}hidden-sm-down{% endif %}">
             <div class="catalog-item">
               <a class="catalog-item__image" href="blog-detail.html">
                 <img src="http://placehold.it/265x197" alt="">

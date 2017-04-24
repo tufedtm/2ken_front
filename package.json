@@ -15,7 +15,7 @@
     "gulp-less": "^3.3.0",
     "gulp-nunjucks": "^3.0.0",
     "gulp-postcss": "^6.4.0",
-    "gulp-sourcemaps": "^2.5.1",
+    "gulp-sourcemaps": "^2.6.0",
     "require-dir": "^0.3.1",
     "rimraf": "^2.6.1",
     "run-sequence": "^1.2.2"

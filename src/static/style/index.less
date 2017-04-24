@@ -11,12 +11,24 @@
   overflow: hidden;
 
   margin: -1px;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 0 0 10px;
 
-  border-radius: 10px;
   background-color: #ffffff;
   box-shadow: 0 0 10px 0 rgba(72, 48, 143, .2);
+
+  @media (min-width: 576px) {
+    border-radius: 10px;
+  }
+}
+
+.sm-cities {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(72, 48, 143, 0.2);
 }
 
 .hero-images {
@@ -25,6 +37,14 @@
   grid-template-rows: repeat(8, 70px);
   grid-template-areas: 'a a a a b b b c c' 'a a a a b b b c c' 'a a a a b b b d d' 'a a a a e e e d d' 'f f g g e e e j j' 'f f g g e e e j j' 'h h h h i i i k k' 'h h h h i i i k k';
   margin: -1px;
+
+  @media (max-width: 767px) {
+    grid-template-rows: repeat(8, 50px);
+  }
+
+  @media (max-width: 575px) {
+    grid-template-rows: repeat(8, 35px);
+  }
 
   a {
     position: relative;
@@ -94,10 +114,16 @@
 
     background-color: fade(#251002, 60);
     transition: .2s;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
   }
 
   strong {
-    font-size: 17px;
+    @media (min-width: 767px) {
+      font-size: 17px;
+    }
   }
 }
 
@@ -137,13 +163,22 @@
  */
 
 .top-lists-wrap {
-  margin-left: -10px;
-  width: 1150px;
+  //margin-left: -10px;
+  //width: 1150px;
 }
 
 .top-lists {
-  columns: 4;
-  padding: 10px 10px 0;
+  max-width: 100%;
+  columns: 2;
+
+  @media (min-width: 768px) {
+    columns: 3;
+  }
+
+  @media (min-width: 992px) {
+    columns: 4;
+    padding-left: 10px;
+  }
 }
 
 .top-list__item {
@@ -217,6 +252,11 @@
 
   border-bottom: 1px solid #e3e1e1;
 
+  @media (max-width: 575px) {
+    font-size: 14px;
+    text-align: left;
+  }
+
   &::after {
 
   }
@@ -225,13 +265,17 @@
 .top-list__list {
   li {
     position: relative;
-    padding-left: 40px;
+    padding: 14px 0 14px 40px;
 
     color: #454545;
     font-size: 17px;
-    line-height: 2.82;
 
     counter-increment: list;
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+      padding: 7px 0 7px 25px;
+    }
 
     &::before {
       content: counter(list);
@@ -253,6 +297,13 @@
 
       border-radius: 50%;
       background-color: #e7e9e9;
+
+      @media (max-width: 575px) {
+        width: 18px;
+        height: 18px;
+
+        font-size: 12px;
+      }
     }
   }
 }

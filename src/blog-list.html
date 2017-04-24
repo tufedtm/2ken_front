@@ -4,12 +4,12 @@
 
 {% block content %}
   <div class="row">
-    <aside class="col-3">
+    <aside class="col-lg-3 hidden-md-down">
       {% include 'includes/aside-blog.html' %}
       {% include 'includes/aside-catalog.html' %}
     </aside>
 
-    <div class="catalog-list col-9">
+    <div class="catalog-list col-lg-9">
       {% for item in [
       'Наблюдайте',
       'А вы замечали?',
@@ -20,7 +20,7 @@
       'Это стоит увидеть',
       'Осторожно! В голове злая собака'
       ]%}
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="catalog-item">
             <a class="catalog-item__image" href="blog-detail.html">
               <img src="http://placehold.it/265x197" alt="">

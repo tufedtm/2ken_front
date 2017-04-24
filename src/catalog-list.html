@@ -3,12 +3,12 @@
 {% block title %}Каталог{% endblock %}
 
 {% block content %}
-  <div class="row">
-    <aside class="col-3">
+  <div class="row catalog-list-page">
+    <aside class="col-lg-3 hidden-md-down">
       {% include 'includes/aside-catalog.html' %}
     </aside>
 
-    <div class="catalog-list col-9">
+    <div class="catalog-list col-lg-9">
       {% for item in [
       {'title': 'Пиросмани','type': 'ресторан','address': 'ул. Пушкина, 4'},
       {'title': 'З&М','type': 'кофейня','address': 'ул. И. Казака, 27А'},
@@ -18,7 +18,7 @@
       {'title': 'Евроаквариум','type': 'зоомагазин','address': 'пр-кт Гамидова, 73'},
       {'title': 'Чудо света','type': 'магазин','address': 'ул. Коркмасова, 27Б'},
       {'title': 'La-creme','type': 'выпечка','address': 'ул. Дзержинского, 12'}] %}
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="catalog-item">
             <span class="catalog-item__badge">{{ item.type }}</span>
             <a class="catalog-item__image" href="catalog-detail.html">

@@ -4,8 +4,8 @@
 
 {% block content %}
   <div class="row">
-    <aside class="col-3">
-      <div class="aside-catalog">
+    <aside class="col-lg-3">
+      <div class="aside-personal">
         <h2 class="aside__title">Личный кабинет</h2>
 
         <ul>
@@ -15,7 +15,7 @@
       </div>
     </aside>
 
-    <div class="catalog-list col-9">
+    <div class="catalog-list col-lg-9">
       <a class="catalog-add-item plus-icon" href="personal-add.html">Добавить заведение</a>
 
       {% for item in [
@@ -24,7 +24,7 @@
       {'title': '05.ru','type': 'магазин','address': 'пр. Имама Шамиля, 5'},
       {'title': 'Чудо света','type': 'магазин','address': 'ул. Коркмасова, 27Б'},
       {'title': 'La-creme','type': 'выпечка','address': 'ул. Дзержинского, 12'}] %}
-        <div class="col-4">
+        <div class="col-md-4 col-6">
           <div class="catalog-item">
             <span class="catalog-item__badge">{{ item.type }}</span>
             <a class="catalog-item__image" href="catalog-detail.html">

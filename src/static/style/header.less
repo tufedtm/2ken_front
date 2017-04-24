@@ -299,3 +299,207 @@
  * форма авторизации
  * конец
  */
+
+/**
+ * header xs
+ * start
+ */
+
+.site-header-xs__top {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media (max-width: 575px) {
+    .logo-text {
+      margin-left: 10px;
+
+      small {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-xs__btn-lnk {
+  display: block;
+  padding: 5px 10px;
+  margin-left: auto;
+
+  color: #fff;
+
+  background-color: #6dc5dd;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.header-xs-nav-toggle {
+  position: relative;
+  width: 24px;
+  height: 20px;
+  margin-left: 15px;
+
+  border: none;
+  background: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: auto;
+
+    border-radius: 2px;
+    background-color: #000;
+    box-shadow: 0 8px 0 0 #000, 0 -8px 0 0 #000;
+  }
+
+  &.active {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      margin: auto;
+
+      border-radius: 2px;
+      background-color: #000;
+      box-shadow: none;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.site-header-xs__bottom {
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  padding: 20px;
+
+  background-color: #fff;
+  box-shadow: 0 6px 10px 0 rgba(72, 48, 143, .2);
+
+  &.active {
+    display: block;
+  }
+}
+
+.xs-nav {
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid fade(#99a3a4, 25);
+}
+
+.xs-nav__item {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  color: #424242;
+  font-size: 14px;
+
+  border: none;
+  background-color: transparent;
+}
+
+.xs-nav__item--first {
+  margin-bottom: 15px;
+}
+
+.user-xs-wrap {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 1px;
+  padding-left: 50px;
+}
+
+.user-xs-wrap--logged {
+  padding-top: 10px;
+  .user-xs-img {
+    top: 0;
+  }
+}
+
+.user-xs-img {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+
+.auth-form-wrap-xs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+
+  background-color: #fff;
+  box-shadow: 0 10px 10px 0 rgba(72, 48, 143, .2);
+
+  .auth__form {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  input + input {
+    margin-top: 10px;
+  }
+}
+
+.xs-form-btn-back {
+  position: relative;
+  margin-right: auto;
+  padding-left: 15px;
+
+  color: #3d4348;
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: underline;
+
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 9px;
+    height: 15px;
+    margin: auto;
+
+    background-image: url(../img/arrow-back.svg);
+  }
+}
+
+/**
+ * header xs
+ * end
+ */
