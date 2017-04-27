@@ -1,7 +1,8 @@
 'use strict';
 
-import gulp from 'gulp'
-import SRC_DIR from './CONST'
+import gulp from "gulp";
+import SRC_DIR from "./CONST";
+
 
 gulp.task('watch', function () {
   gulp.watch(SRC_DIR.style_watch, ['style']);

@@ -95,17 +95,15 @@
         <span class="logo-text">2Ken<small>вся республика в твоих руках</small></span>
       </a>
 
-      <a class="header-xs__btn-lnk" href="catalog-list.html">Каталог</a>
+      <button class="header-xs__btn" data-js-xs-btn="catalog">Каталог</button>
 
       <button class="header-xs-nav-toggle" data-js-xs-toggle-btn></button>
     </div>
     <div class="site-header-xs__bottom" data-js-xs-bottom>
       <div>
         <nav class="xs-nav">
-          <ul>
-            <li class="xs-nav__item"><a href="">Рейтинги</a></li>
-            <li class="xs-nav__item"><a href="blog-list.html">Блог</a></li>
-          </ul>
+          <button class="xs-nav__item" data-js-xs-btn="blog">Блог</button>
+          <button class="xs-nav__item" data-js-xs-btn="rating">Рейтинги</button>
         </nav>
 
         {% if false %}
@@ -119,16 +117,16 @@
 
         <div class="user-xs-wrap">
           <img class="user-xs-img" src="static/img/profile-icon.svg">
-          <button class="xs-nav__item" data-js-xs-auth-btn="sign_in">Войти</button>
-          <button class="xs-nav__item" data-js-xs-auth-btn="sign_up">Регистрация</button>
+          <button class="xs-nav__item" data-js-xs-btn="sign_in">Войти</button>
+          <button class="xs-nav__item" data-js-xs-btn="sign_up">Регистрация</button>
         </div>
 
       </div>
 
-      <div class="auth-form-wrap-xs auth-form-wrap--sign-in" data-js-xs-auth-form="sign_in">
-        <button class="xs-form-btn-back" data-js-xs-auth-back-btn>Назад</button>
+      <div class="auth-form-wrap-xs auth-form-wrap--sign-in" data-js-xs-content="sign_in">
+        <button class="xs-form-btn-back" data-js-xs-back-btn>Назад</button>
         <p class="auth-form__title">Авторизация</p>
-        <button class="auth-form__change-form-btn" data-js-xs-auth-btn="sign_up">регистрация</button>
+        <button class="auth-form__change-form-btn" data-js-xs-btn="sign_up">регистрация</button>
 
         <form class="auth__form">
           <input class="input" type="text" placeholder="логин" required>
@@ -141,10 +139,10 @@
         <div class="soc-auth"></div>
       </div>
 
-      <div class="auth-form-wrap-xs" data-js-xs-auth-form="sign_up">
-        <button class="xs-form-btn-back" data-js-xs-auth-back-btn>Назад</button>
+      <div class="auth-form-wrap-xs" data-js-xs-content="sign_up">
+        <button class="xs-form-btn-back" data-js-xs-back-btn>Назад</button>
         <p class="auth-form__title">Регистрация</p>
-        <button class="auth-form__change-form-btn" data-js-xs-auth-btn="sign_in">авторизация</button>
+        <button class="auth-form__change-form-btn" data-js-xs-btn="sign_in">авторизация</button>
 
         <form class="auth__form">
           <input class="input" type="text" placeholder="логин" required>
@@ -153,6 +151,21 @@
 
           <button class="btn btn--header-submit">Зарегистрироваться</button>
         </form>
+      </div>
+
+      <div class="auth-form-wrap-xs" data-js-xs-content="catalog">
+        <button class="xs-form-btn-back" data-js-xs-back-btn>Назад</button>
+        {% include 'includes/aside-catalog.html' %}
+      </div>
+
+      <div class="auth-form-wrap-xs" data-js-xs-content="blog">
+        <button class="xs-form-btn-back" data-js-xs-back-btn>Назад</button>
+        {% include 'includes/aside-blog.html' %}
+      </div>
+
+      <div class="auth-form-wrap-xs" data-js-xs-content="rating">
+        <button class="xs-form-btn-back" data-js-xs-back-btn>Назад</button>
+        {% include 'includes/aside-country.html' %}
       </div>
 
     </div>

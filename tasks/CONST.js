@@ -1,3 +1,5 @@
+'use strict';
+
 const SRC_DIR = {
   dest: 'dist',
 
@@ -11,4 +13,5 @@ const SRC_DIR = {
   template_watch: 'src/**/*.html',
 };
 
-module.exports = SRC_DIR;
+
+export default SRC_DIR;

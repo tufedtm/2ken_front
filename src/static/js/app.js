@@ -78,12 +78,16 @@ $(() => {
   const xsNavToggleBtn = document.querySelector('[data-js-xs-toggle-btn]');
   const xsNavBottom = document.querySelector('[data-js-xs-bottom]');
 
+  const show_xs_bottom = () => {
+    xsNavToggleBtn.classList.add('active');
+    xsNavBottom.classList.add('active');
+  };
+
   xsNavToggleBtn.addEventListener('click', () => {
     xsNavToggleBtn.dataset.jsXsToggleBtn = xsNavToggleBtn.dataset.jsXsToggleBtn ? '' : 'active';
 
     if (xsNavToggleBtn.dataset.jsXsToggleBtn === 'active') {
-      xsNavToggleBtn.classList.add('active');
-      xsNavBottom.classList.add('active');
+      show_xs_bottom();
     } else {
       xsNavToggleBtn.classList.remove('active');
       xsNavBottom.classList.remove('active');
@@ -91,39 +95,37 @@ $(() => {
   });
 
 
-  const xsAuthBtnSignIn = document.querySelectorAll('[data-js-xs-auth-btn=sign_in]');
-  const xsAuthBtnSignUp = document.querySelectorAll('[data-js-xs-auth-btn=sign_up]');
-  const xsAuthBackBtn = document.querySelectorAll('[data-js-xs-auth-back-btn]');
+  const xsBtn = document.querySelectorAll('[data-js-xs-btn]');
+  const xsAuthBackBtn = document.querySelectorAll('[data-js-xs-back-btn]');
 
-  const hide_xs_auth_forms = () => {
-    document.querySelectorAll('[data-js-xs-auth-form]').forEach(item => {
+  const hide_xs_content = () => {
+    document.querySelectorAll('[data-js-xs-content]').forEach(item => {
       item.style.display = 'none'
     })
   };
 
-  const show_xs_auth_form = formType => {
-    hide_xs_auth_forms();
-    const xsAuthForm = document.querySelector(`[data-js-xs-auth-form=${formType}]`);
-    xsAuthForm.style.display = '';
+  const show_xs_content = (formType) => {
+    hide_xs_content();
+    document.querySelector(`[data-js-xs-content=${formType}]`).style.display = '';
   };
 
-  hide_xs_auth_forms();
+  hide_xs_content();
 
   xsAuthBackBtn.forEach(item => {
     item.addEventListener('click', () => {
-      hide_xs_auth_forms();
+      hide_xs_content();
     })
   });
 
-  xsAuthBtnSignIn.forEach(item => {
+  xsBtn.forEach(item => {
     item.addEventListener('click', () => {
-      show_xs_auth_form('sign_in')
-    })
-  });
+      const contentName = item.getAttribute('data-js-xs-btn');
 
-  xsAuthBtnSignUp.forEach(item => {
-    item.addEventListener('click', () => {
-      show_xs_auth_form('sign_up')
+      if (contentName === 'catalog') {
+        show_xs_bottom();
+      }
+
+      show_xs_content(contentName);
     })
   });
 

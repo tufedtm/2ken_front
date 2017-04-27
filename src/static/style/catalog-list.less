@@ -29,7 +29,7 @@
 .catalog-item__badge {
   position: absolute;
   top: 10px;
-  left: 0;
+  left: 5px;
 
   display: flex;
   align-items: center;
@@ -45,40 +45,39 @@
   &::after {
     content: '';
     position: absolute;
-    left: 100%;
-    border-right: 10px solid transparent;
+    bottom: 0;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   &::before {
-    top: 0;
-    border-top: 12px solid #fff;
+    right: 99%;
+    width: 4px;
+    height: calc(~'100% + 2px');
+    background-image: url(../img/badge-left.svg);
   }
 
   &::after {
-    bottom: 0;
-    border-bottom: 12px solid #fff;
+    left: 99%;
+    width: 7px;
+    height: 100%;
+    background-image: url(../img/badge-right.svg);
   }
 
   @media (min-width: 576px) {
-    left: 5px;
+    left: 10px;
 
     padding: 6px 15px;
 
     font-size: 16px;
 
-    &::before,
-    &::after {
-      border-right: 20px solid transparent;
-    }
-
     &::before {
-      top: 0;
-      border-top: 15px solid #fff;
+      height: calc(~'100% + 2.5px');
     }
 
     &::after {
-      bottom: 0;
-      border-bottom: 15px solid #fff;
+      width: 12px;
     }
   }
 }
